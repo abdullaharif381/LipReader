@@ -17,13 +17,6 @@
   - English language only in current implementation
   - Reduced accuracy with extreme facial angles or poor lighting
 
-## 📊 Results & Performance
-
-The model achieves approximately:
-- 85-90% character accuracy on test data
-- 60-70% word accuracy on clear, well-framed videos
-- Processing time of ~1-2 seconds per video second on GPU
-
 ## 📚 Resources
 
 This project builds upon research and implementations from:
@@ -36,7 +29,6 @@ MIT License © 2025
 ## 👥 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request or open an issue for bugs, questions, or feature requests.# LipNet Transcription Web Application
-
 A deep learning application that transcribes mute videos by reading the lips of people speaking in English using a custom LipNet architecture.
 
 ## 🧠 Overview
@@ -140,10 +132,9 @@ The model is trained with:
    pip install -r requirements.txt
    ```
 
-3. **Download pre-trained model:**
+3. **Train the model by running notebook.ipynb:**
    ```bash
-   # The model will be downloaded from Google Drive
-   python download_model.py
+   save the lipne.keras model in /models folder of this repository
    ```
 
 4. **Run the Flask app:**
@@ -165,14 +156,8 @@ The model is trained with:
 lipnet-transcription-app/
 │
 ├── app.py                        # Main Flask application
-├── download_model.py             # Script to download pre-trained model
-├── utils/
-│   ├── preprocess.py             # Video preprocessing utilities
-│   ├── data_loader.py            # Data pipeline functions
-│   └── visualization.py          # Result visualization helpers
 ├── model/
-│   ├── lipnet_model.keras        # Pre-trained LipNet weights
-│   └── architecture.py           # Model architecture definition
+│   ├── lipnet_model.keras        # your model goes here
 ├── templates/
 │   └── index.html                # HTML front-end
 ├── static/
@@ -180,10 +165,7 @@ lipnet-transcription-app/
 │   │   └── style.css             # Custom CSS styles
 │   └── js/
 │       └── script.js             # JavaScript functionality
-├── data/
-│   └── sample_videos/            # Example videos for testing
-├── notebooks/
-│   └── training_pipeline.ipynb   # Notebook for model training
+├── notebook.ipynb
 └── requirements.txt              # Python dependencies
 ```
 
