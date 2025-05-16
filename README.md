@@ -153,7 +153,7 @@ The model is trained with:
 ## 📁 Project Structure
 
 ```
-lipnet-transcription-app/
+LipReader/
 │
 ├── app.py                        # Main Flask application
 ├── model/
