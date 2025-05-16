@@ -132,9 +132,9 @@ The model is trained with:
    pip install -r requirements.txt
    ```
 
-3. **Train the model by running notebook.ipynb:**
+3. **Train the model by running lipnet-notebook.ipynb:**
    ```bash
-   save the lipne.keras model in /models folder of this repository
+   save the lipnet.keras model in /models folder of this repository
    ```
 
 4. **Run the Flask app:**
@@ -165,11 +165,14 @@ lipnet-transcription-app/
 │   │   └── style.css             # Custom CSS styles
 │   └── js/
 │       └── script.js             # JavaScript functionality
-├── notebook.ipynb
+├── notebooks/
+│   └── syncvsr-preprocessing.ipynb
+|   └── syncvsr-training.ipynb
+|   └── lipnet-training.ipynb
 └── requirements.txt              # Python dependencies
 ```
 
 
 ## Team members:
-[Tahmooras Khan - Notebook](https://www.kaggle.com/code/tahmoriskhan/notebookfc35831781/).
-[Ibtehaj Ali - Research](https://github.com/Ibtehaj778)
+[Tahmooras Khan - Linkedin](https://www.linkedin.com/in/tahmooras-khan-8341452a1).
+[Ibtehaj Ali - Github](https://github.com/Ibtehaj778)
