@@ -31,8 +31,8 @@ pip install -r requirements.txt
 
 1. **Clone this repository:**
    ```bash
-   git clone https://github.com/your-username/lipnet-transcription-app.git
-   cd lipnet-transcription-app
+   git clone https://github.com/abdullaharif381/lipreader.git
+   cd lipreader
    ```
 
 2. **Install dependencies:**
@@ -62,17 +62,15 @@ lipnet-transcription-app/
 │   └── js/
 │       └── script.js     # JavaScript functionality
 ├── model/
-│   └── lipnet_model.h5   # Pre-trained LipNet weights
+│   └── lipnet_model.h5   # Your pre-trained lipNet model
 ├── utils/
 │   └── preprocess.py     # Video preprocessing utilities
 └── requirements.txt      # Python dependencies
 ```
 
 ## 🧪 Usage Notes
-
-- Ensure your `.mpg` videos are clear with well-centered faces for optimal results
-- The pre-trained model expects specific video dimensions and frame rates
-- For best results, videos should have good lighting and minimal background noise
+- Run the notebook.ipynb and save the .keras file in /models folder.
+- Ensure your GRID dataset `.mpg` videos are clear with well-centered faces for optimal results
 
 ## 📄 License
 
@@ -81,3 +79,7 @@ MIT License © 2025
 ## 👥 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
+
+## Team members:
+[Tahmooras Khan - Notebook](https://www.kaggle.com/code/tahmoriskhan/notebookfc35831781/).
+[Ibtehaj Ali - Research](https://github.com/Ibtehaj778)
