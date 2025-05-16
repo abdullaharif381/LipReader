@@ -123,8 +123,8 @@ The model is trained with:
 
 1. **Clone this repository:**
    ```bash
-   git clone https://github.com/your-username/lipnet-transcription-app.git
-   cd lipnet-transcription-app
+   git clone https://github.com/abdullaharif381/LipReader.git
+   cd LipReader
    ```
 
 2. **Install dependencies:**
@@ -132,9 +132,9 @@ The model is trained with:
    pip install -r requirements.txt
    ```
 
-3. **Train the model by running lipnet-notebook.ipynb:**
+3. **Place your LipNet model in models folder**
    ```bash
-   save the lipnet.keras model in /models folder of this repository
+   save the lipnet.keras model in /models
    ```
 
 4. **Run the Flask app:**
@@ -157,7 +157,7 @@ lipnet-transcription-app/
 │
 ├── app.py                        # Main Flask application
 ├── model/
-│   ├── lipnet_model.keras        # your model goes here
+│   ├── lipnet.keras        # your model goes here
 ├── templates/
 │   └── index.html                # HTML front-end
 ├── static/
