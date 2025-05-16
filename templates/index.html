@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LipNet Transcription</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>LipNet Transcription</h1>
+            <p>Upload a silent video to transcribe lip movements</p>
+        </header>
+
+        <main>
+            {% if not model_exists %}
+            <div class="alert alert-warning">
+                <strong>Warning:</strong> Model file not found. Please place <code>lipnet.keras</code> in the <code>models/</code> directory.
+            </div>
+            {% endif %}
+
+            <div class="upload-container">
+                <form id="upload-form" enctype="multipart/form-data">
+                    <div class="file-input-container">
+                        <label for="video-upload" class="file-label">
+                            <span class="file-icon">📁</span>
+                            <span class="file-text">Choose a .mpg video file</span>
+                        </label>
+                        <input type="file" id="video-upload" name="video" accept=".mpg" class="file-input">
+                        <div id="file-name" class="file-name"></div>
+                    </div>
+                    
+                    <button type="submit" id="submit-btn" class="submit-btn" {% if not model_exists %}disabled{% endif %}>
+                        Transcribe Video
+                    </button>
+                </form>
+            </div>
+
+            <div id="loading" class="loading-container hidden">
+                <div class="spinner"></div>
+                <p>Processing video... This may take a moment.</p>
+            </div>
+
+            <div id="result-container" class="result-container hidden">
+                <h2>Transcription Result</h2>
+                <div id="transcription-result" class="transcription-result"></div>
+            </div>
+
+            <div id="error-container" class="error-container hidden">
+                <h2>Error</h2>
+                <div id="error-message" class="error-message"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by TensorFlow and Flask</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
